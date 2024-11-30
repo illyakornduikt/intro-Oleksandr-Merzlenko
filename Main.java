@@ -1,22 +1,22 @@
 package main;
 
+import java.awt.Component;
 import javax.swing.JFrame;
 
 public class Main {
+    public Main() {
+    }
+
     public static void main(String[] args) {
         JFrame window = new JFrame();
-        window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        window.setDefaultCloseOperation(3);
         window.setResizable(false);
         window.setTitle("Java2DStudy");
-
         GamePanel gamePanel = new GamePanel();
         window.add(gamePanel);
-
         window.pack();
-
-        window.setLocationRelativeTo(null);
+        window.setLocationRelativeTo((Component)null);
         window.setVisible(true);
-
         gamePanel.startGameThread();
     }
 }
